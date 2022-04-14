@@ -1,0 +1,286 @@
+/*styling*/
+video {
+  max-width: 100%;
+  border-radius: 1%;
+  border-width: 0.15rem;
+  opacity: 0.4;
+}
+
+/*navigationstyling*/
+
+@font-face {
+font-family: 'Marvin Visions Trial Regular';
+src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/MarvinVisionsTrial-Variable.ttf");
+}
+html {
+font-family: Marvin Visions Variable;
+font-size: 30px;
+
+}
+
+.sidebar {
+  position: absolute;
+  width: 25%;
+  height: 100vh;
+  top: -10%;
+  margin: 0%;
+  font-size: 0.65em;
+}
+.nav {
+  position: relative;
+  margin: 0 290%;
+  text-align: left;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+.nav ul {
+  list-style: none;
+}
+.nav ul li {
+  position: relative;
+  margin: 3.2em 0;
+}
+.nav ul li a {
+  line-height: 5em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  letter-spacing: 0.8em;
+  color: rgb(255, 255, 255);
+  display: block;
+  transition: all ease-out 300ms;
+}
+.nav ul li.active a {
+  color: rgb(255, 255, 255);
+}
+.nav ul li:not(.active)::after {
+  opacity: 0.2;
+}
+.nav ul li:not(.active):hover a {
+  color: rgb(0, 174, 255);
+}
+.nav ul li::after {
+  position: absolute;
+  width: 50%;
+  height: 0.2em;
+  background: rgb(255, 255, 255);
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(to bottom, #ffffff, #ff0000);
+}
+
+/*Text effect*/
+
+body {
+  background-color: #1b1b1d;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+body:after {
+  content: '';
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0.2;
+  filter: invert(1);
+  background-size: cover;
+}
+
+#quote > * {
+  color: hsl(347, 7%, 29%);
+  font-variation-settings: 'wght' var(--weight);
+}
+#quote2 > * {
+  color: hsl(347, 7%, 29%);
+  font-variation-settings: 'wght' var(--weight);
+}
+
+.grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+
+/*Video BG*/
+video {  
+  max-width: 100%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+/*history class*/
+
+.history-content {
+  display: flex;
+  max-width: 70%;
+  flex-wrap: wrap;
+}
+.history-wrapper{
+  display: flex;
+  width: 100%;
+}
+.history-text {
+  display: flex;
+  margin-right: auto;
+  font-size: 100px;
+  font-family: 'Marvin Visions Trial Regular';
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+
+}
+.history-text2{
+  display: flex;
+  margin-right: auto;
+  font-size: 20px;
+  font-family: 'regular';
+  justify-content: center;
+  color: rgb(255, 255, 255);
+}
+
+.home-content {
+  display: flex;
+  max-width: 60%;
+  flex-wrap: wrap;
+}
+.home-wrapper{
+  display: flex;
+  width: 100%;
+}
+
+.home-break {
+  flex-basis: 100%;
+}
+
+.home-image img {
+  flex-basis: 100%;
+  border-radius: 5%;
+}
+
+.home-wrapper .home-image{
+  width: 140px;
+}
+
+/* planet class */
+.planet-content {
+  display: flex;
+  max-width: 60%;
+  flex-wrap: wrap;
+}
+
+.planet-break {
+  flex-basis: 100%;
+}
+
+.planet-wrapper  {
+  display: flex;
+  width: 100%;
+}
+.planet-wrapper .planet-text p {
+  display: flex;
+  margin-left: 20px;
+  font-size: 20px;
+  font-family: 'Regular';
+  justify-content: center;
+  color: white;
+}
+.planet-wrapper .planet-image img {
+  width: 140px; 
+}
+
+
+/* Mquery */
+@media screen and (max-width: 992px) {
+  .nav {
+      display: none;
+  }
+  .logo-image {
+    display: none;
+  }
+  .planet-content {
+    max-width: 100%;
+  }
+  .home-content{
+    max-width: 100%;
+  }
+  .history-content{
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .planet-image img {
+      flex-basis: 100%;
+  }
+  .home-image img {
+    flex-basis: 100%;
+}
+  .home-content {
+    max-width: 100%;
+ }
+}
+
+/* SocialMedia */
+.fa {
+  position: absolute;
+  top: 12%;
+  right: 20%;
+  padding: 20px;
+  font-size: 30px;
+  width: 15px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.3;
+  color: aqua;
+}
+.fa-facebook {
+  position: absolute;
+  left:370%;
+  border-radius: 50%;
+  color: white; 
+}
+.fa-twitter {
+  position: absolute;
+  left:355%;
+  border-radius: 50%;
+  color: white;
+}
+.fa-youtube {
+  position: absolute;
+  left:340%;
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+}
+.fa-google {
+  position: absolute;
+  left:325%;
+  border-radius: 50%;
+  color: white;
+}
