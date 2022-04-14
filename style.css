@@ -211,6 +211,8 @@ video {
 .planet-wrapper .planet-image img {
   width: 140px; 
 }
+
+/* logo */
 .logo-image img{
   position: relative;
   margin-left: 140%;
